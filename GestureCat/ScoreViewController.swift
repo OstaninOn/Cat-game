@@ -54,8 +54,8 @@ class ScrolViewController: UIViewController {
         if scores.count != 3 {
             StoreManager.shared.scores = [
                 ScoreModel(name: "", score: 0, date: ""),
-                ScoreModel(name: "", score: 0, date: ""),
-                ScoreModel(name: "", score: 0, date: "")
+                ScoreModel(name: "", score: 1, date: ""),
+                ScoreModel(name: "", score: 2, date: "")
             ]
         }
         
@@ -68,8 +68,8 @@ class ScrolViewController: UIViewController {
         thirdScoreLabel.text = scores[2].score.makeScore()
         
         myLabelData.text = scores[0].date
-        myLabelDataSecond.text = scores[0].date
-        mtLabelDataThird.text = scores[0].date
+        myLabelDataSecond.text = scores[1].date
+        mtLabelDataThird.text = scores[2].date
 
     }
    
