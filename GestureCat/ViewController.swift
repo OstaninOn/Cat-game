@@ -218,16 +218,12 @@ class ViewController: UIViewController {
             imageSausageFirst.layer.removeAllAnimations()
             imagSausageSecond.layer.removeAllAnimations()
             isGaming = false
-            
             saveRecord()
        
-            
           let alert = UIAlertController(title: "GAME OVER", message: "saving", preferredStyle: .alert)
             
     guard let viewBack = storyboard?.instantiateViewController(withIdentifier: "transition") else { return }
           let okButton = UIAlertAction(title: "OK", style: .default, handler: { [self]_ in self.navigationController?.pushViewController(viewBack, animated: true)
-
-                
             })
             
             alert.addAction(okButton)
@@ -236,9 +232,7 @@ class ViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.intersects()
-            
         }
-        
     }
 
     func saveRecord() {
@@ -254,10 +248,7 @@ class ViewController: UIViewController {
         scores.sort(by: >) 
         scores.removeLast()
         StoreManager.shared.scores = scores
-        
         }
-    
-    
     
     func intersectsFirstFish() {
         guard isGaming else { return }
