@@ -73,7 +73,6 @@ class TitleViewController: UIViewController {
         let itemBehaviour = UIDynamicItemBehavior(items: [catDinaic])
             itemBehaviour.elasticity = 1.05
         animator.addBehavior(itemBehaviour)
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -86,7 +85,7 @@ class TitleViewController: UIViewController {
         }
        
     }
-    
+
     // MARK: - Private methods
     
     private func BigJapan() {
@@ -96,7 +95,12 @@ class TitleViewController: UIViewController {
     }
 
     private func checkUserName(handler: ((_ isConfirmed: Bool) -> ())? = nil) {
-
+        
+        guard StoreManager.shared.name.count == 0 else {
+            handler?(true)
+            return
+        }
+        
         let alert = UIAlertController(title: "Enter your name", message: "saving scores", preferredStyle: .alert)
         
         alert.addTextField { textField in
