@@ -92,7 +92,7 @@ class ViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        saveRecord()
+        
     }
     
     @objc func tick() {
@@ -204,6 +204,7 @@ class ViewController: UIViewController {
     }
     
     func intersects() {
+        
         guard isGaming else { return }
         if checkIntersect(catView, imageViewIce)
             || checkIntersect(catView, imageViewIceThird) {
@@ -219,10 +220,13 @@ class ViewController: UIViewController {
             isGaming = false
             
             saveRecord()
+       
             
-            let alert = UIAlertController(title: "GAME OVER", message: "попробуй еще раз 🙊", preferredStyle: .alert)
-            guard let viewBack = storyboard?.instantiateViewController(withIdentifier: "transition") else { return }
-            let okButton = UIAlertAction(title: "OK", style: .default, handler: { [self]_ in self.navigationController?.pushViewController(viewBack, animated: true)
+          let alert = UIAlertController(title: "GAME OVER", message: "saving", preferredStyle: .alert)
+            
+    guard let viewBack = storyboard?.instantiateViewController(withIdentifier: "transition") else { return }
+          let okButton = UIAlertAction(title: "OK", style: .default, handler: { [self]_ in self.navigationController?.pushViewController(viewBack, animated: true)
+
                 
             })
             
@@ -234,22 +238,25 @@ class ViewController: UIViewController {
             self.intersects()
             
         }
+        
     }
-    
+
     func saveRecord() {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.YYYY HH:mm"
         let currentDateString = dateFormatter.string(from: Date())
         
-        let newScore = ScoreModel(name: "Default name", score: score, date: currentDateString)
+        let newScore = ScoreModel(name: "userName", score: score, date: currentDateString)
         
         var scores = StoreManager.shared.scores
         scores.append(newScore)
-        scores.sort(by: >)
+        scores.sort(by: >) 
         scores.removeLast()
         StoreManager.shared.scores = scores
-    }
+        
+        }
+    
     
     
     func intersectsFirstFish() {

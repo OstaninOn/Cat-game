@@ -11,6 +11,7 @@ class StoreManager {
     
     // MARK: - Singletone
     static var shared = StoreManager()
+    
     private init() { }
     
     // MARK: - Public properties
@@ -21,6 +22,15 @@ class StoreManager {
         
         set {
             storage.set(newValue, forKey: "hasDefaultValues")
+        }
+    }
+  
+    var name: String{
+        get{
+            storage.string(forKey: "name") ?? ""
+        }
+        set{
+            storage.set(newValue, forKey: "name")
         }
     }
     
