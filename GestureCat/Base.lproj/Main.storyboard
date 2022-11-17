@@ -115,7 +115,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rf-2c-npB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-585" y="14"/>
+            <point key="canvasLocation" x="-1377" y="14"/>
         </scene>
         <!--Title View Controller-->
         <scene sceneID="kgN-VJ-F17">
@@ -198,12 +198,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdb-Zq-biW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370.76923076923077" y="13.507109004739336"/>
+            <point key="canvasLocation" x="-134" y="14"/>
         </scene>
         <!--Scrol View Controller-->
         <scene sceneID="ZUO-Ov-80A">
             <objects>
-                <viewController storyboardIdentifier="SCR" id="xmS-aO-cL7" customClass="ScrolViewController" customModule="GestureCat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xmS-aO-cL7" customClass="ScrolViewController" customModule="GestureCat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IxO-rF-2CP">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -73,8 +73,57 @@ class TitleViewController: UIViewController {
         let itemBehaviour = UIDynamicItemBehavior(items: [catDinaic])
             itemBehaviour.elasticity = 1.05
         animator.addBehavior(itemBehaviour)
-            
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    
+        checkUserName() { isConfirmed in
+            if !isConfirmed {
+                self.BigJapan()
+            }
+        }
+       
+    }
 
+    // MARK: - Private methods
+    
+    private func BigJapan() {
+        guard let url = URL(string: "https://www.youtube.com/watch?v=sjGl-pq4RxQ") else { return }
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+
+    private func checkUserName(handler: ((_ isConfirmed: Bool) -> ())? = nil) {
+        
+        guard StoreManager.shared.name.count == 0 else {
+            handler?(true)
+            return
+        }
+        
+        let alert = UIAlertController(title: "Enter your name", message: "saving scores", preferredStyle: .alert)
+        
+        alert.addTextField { textField in
+            textField.placeholder = "Name"
+        }
+        
+        let confirmAction = UIAlertAction(title: "Save", style: .default) { action in
+            let name = alert.textFields?.first?.text ?? ""
+            StoreManager.shared.name = name
+            if name.count == 0 {
+                handler?(false)
+            } else {
+                handler?(true)
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
+            handler?(false)
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(confirmAction)
+        
+        self.present(alert, animated: true)
+        
+    }
 }

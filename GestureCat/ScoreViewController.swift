@@ -46,16 +46,15 @@ class ScrolViewController: UIViewController {
         updateScores()
     }
     
-    
     private func updateScores() {
         
         let scores = StoreManager.shared.scores
         
         if scores.count != 3 {
             StoreManager.shared.scores = [
-                ScoreModel(name: "", score: 0, date: ""),
-                ScoreModel(name: "", score: 1, date: ""),
-                ScoreModel(name: "", score: 2, date: "")
+            ScoreModel(name: "", score: 0, date: ""),
+            ScoreModel(name: "", score: 0, date: ""),
+            ScoreModel(name: "", score: 0, date: "")
             ]
         }
         
