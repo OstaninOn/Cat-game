@@ -241,7 +241,9 @@ class ViewController: UIViewController {
         dateFormatter.dateFormat = "dd.MM.YYYY HH:mm"
         let currentDateString = dateFormatter.string(from: Date())
         
-        let newScore = ScoreModel(name: "userName", score: score, date: currentDateString)
+        let userName = StoreManager.shared.name
+        
+        let newScore = ScoreModel(name: userName, score: score, date: currentDateString)
         
         var scores = StoreManager.shared.scores
         scores.append(newScore)
