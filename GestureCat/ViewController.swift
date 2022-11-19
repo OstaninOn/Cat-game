@@ -218,16 +218,12 @@ class ViewController: UIViewController {
             imageSausageFirst.layer.removeAllAnimations()
             imagSausageSecond.layer.removeAllAnimations()
             isGaming = false
-            
             saveRecord()
        
-            
           let alert = UIAlertController(title: "GAME OVER", message: "saving", preferredStyle: .alert)
             
     guard let viewBack = storyboard?.instantiateViewController(withIdentifier: "transition") else { return }
           let okButton = UIAlertAction(title: "OK", style: .default, handler: { [self]_ in self.navigationController?.pushViewController(viewBack, animated: true)
-
-                
             })
             
             alert.addAction(okButton)
@@ -236,9 +232,7 @@ class ViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.intersects()
-            
         }
-        
     }
 
     func saveRecord() {
@@ -247,17 +241,14 @@ class ViewController: UIViewController {
         dateFormatter.dateFormat = "dd.MM.YYYY HH:mm"
         let currentDateString = dateFormatter.string(from: Date())
         
-        let newScore = ScoreModel(name: "userName", score: score, date: currentDateString)
+        let userName = StoreManager.shared.name
+        let newScore = ScoreModel(name: userName, score: score, date: currentDateString)
         
         var scores = StoreManager.shared.scores
         scores.append(newScore)
-        scores.sort(by: >) 
-        scores.removeLast()
+        scores.sort(by: >)
         StoreManager.shared.scores = scores
-        
         }
-    
-    
     
     func intersectsFirstFish() {
         guard isGaming else { return }

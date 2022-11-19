@@ -28,7 +28,6 @@ class TitleViewController: UIViewController {
 
             BackgroundImage.makeBlur()
 
-            
         let gradientTopRecord = CAGradientLayer()
             gradientTopRecord.colors = [UIColor.magenta.cgColor,UIColor.systemYellow.cgColor,]
         gradientTopRecord.frame = TopRecord.bounds
@@ -59,7 +58,6 @@ class TitleViewController: UIViewController {
         view.layer.insertSublayer(gradientView, at: 0)
         view.layer.masksToBounds = false
         
-                    
         animator = UIDynamicAnimator(referenceView: view)
         gravity = UIGravityBehavior(items: [catDinaic])
         animator.addBehavior(gravity)
@@ -69,7 +67,6 @@ class TitleViewController: UIViewController {
         collision.translatesReferenceBoundsIntoBoundary = true
         animator.addBehavior(collision)
 
-          
         let itemBehaviour = UIDynamicItemBehavior(items: [catDinaic])
             itemBehaviour.elasticity = 1.05
         animator.addBehavior(itemBehaviour)
@@ -83,7 +80,6 @@ class TitleViewController: UIViewController {
                 self.BigJapan()
             }
         }
-       
     }
 
     // MARK: - Private methods

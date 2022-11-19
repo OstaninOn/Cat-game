@@ -8,7 +8,7 @@
 import UIKit
 
 class ScrolViewController: UIViewController {
-   
+    private var isFirstLoad = true
     var myDate = ""
     var myDateSecond = ""
     var myDateThird = ""
@@ -44,6 +44,7 @@ class ScrolViewController: UIViewController {
         super.viewDidLoad()
         
         updateScores()
+        
     }
     
     private func updateScores() {

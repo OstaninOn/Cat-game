@@ -157,7 +157,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="xmS-aO-cL7" kind="show" id="iTR-pr-hwn"/>
+                                    <segue destination="WUV-Ig-DxB" kind="show" id="nDZ-rY-YqJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjy-8A-eXk" userLabel="settings">
@@ -199,6 +199,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdb-Zq-biW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-134" y="14"/>
+        </scene>
+        <!--Scores View Controller-->
+        <scene sceneID="f5b-QK-MA8">
+            <objects>
+                <viewController id="WUV-Ig-DxB" customClass="ScoresViewController" customModule="GestureCat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3rH-KG-CMD">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Vj-2H-GgK">
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dVe-p4-C0r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Vj-2H-GgK" firstAttribute="top" secondItem="dVe-p4-C0r" secondAttribute="top" id="8w6-Qr-jmW"/>
+                            <constraint firstItem="0Vj-2H-GgK" firstAttribute="leading" secondItem="dVe-p4-C0r" secondAttribute="leading" id="O51-Y3-UPi"/>
+                            <constraint firstItem="dVe-p4-C0r" firstAttribute="trailing" secondItem="0Vj-2H-GgK" secondAttribute="trailing" id="Uo3-wx-8zZ"/>
+                            <constraint firstItem="dVe-p4-C0r" firstAttribute="bottom" secondItem="0Vj-2H-GgK" secondAttribute="bottom" id="kf8-kr-nDf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ORh-n6-god"/>
+                    <connections>
+                        <outlet property="tableView" destination="0Vj-2H-GgK" id="inn-Nr-n8W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BB9-Oe-59w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181.5384615384614" y="140.75829383886256"/>
         </scene>
         <!--Scrol View Controller-->
         <scene sceneID="ZUO-Ov-80A">
@@ -429,7 +460,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgO-hb-Bmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204.6153846153845" y="124.40758293838861"/>
+            <point key="canvasLocation" x="2491" y="-378"/>
         </scene>
     </scenes>
     <resources>

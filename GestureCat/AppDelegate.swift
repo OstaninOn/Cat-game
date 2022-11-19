@@ -14,11 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
   
         if !StoreManager.shared.hasDefaultValues {
-            StoreManager.shared.scores = [
-                ScoreModel(name: "", score: 0, date: ""),
-                ScoreModel(name: "", score: 0, date: ""),
-                ScoreModel(name: "", score: 0, date: "")
-            ]
+            StoreManager.shared.scores = []
             
             StoreManager.shared.hasDefaultValues = true
         }
