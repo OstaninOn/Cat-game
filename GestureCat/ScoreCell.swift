@@ -27,4 +27,16 @@ class ScoreCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        usernameLabel.text = ""
+        scoreLabel.text = ""
+        dateLabel.text = ""
+    }
+    public func setup(with score: ScoreModel) {
+        usernameLabel.text = score.name
+        scoreLabel.text = score.score.makeScore()
+        dateLabel.text = score.date
+    }
 }

@@ -242,13 +242,11 @@ class ViewController: UIViewController {
         let currentDateString = dateFormatter.string(from: Date())
         
         let userName = StoreManager.shared.name
-        
         let newScore = ScoreModel(name: userName, score: score, date: currentDateString)
         
         var scores = StoreManager.shared.scores
         scores.append(newScore)
-        scores.sort(by: >) 
-        scores.removeLast()
+        scores.sort(by: >)
         StoreManager.shared.scores = scores
         }
     
