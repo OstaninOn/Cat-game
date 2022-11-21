@@ -9,7 +9,6 @@ import UIKit
 
 class ScoreCell: UITableViewCell {
 
-    
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -18,13 +17,10 @@ class ScoreCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     override func prepareForReuse() {
@@ -33,7 +29,9 @@ class ScoreCell: UITableViewCell {
         usernameLabel.text = ""
         scoreLabel.text = ""
         dateLabel.text = ""
+        self.backgroundColor = .white
     }
+    
     public func setup(with score: ScoreModel) {
         usernameLabel.text = score.name
         scoreLabel.text = score.score.makeScore()

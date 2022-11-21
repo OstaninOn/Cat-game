@@ -135,6 +135,7 @@ class ViewController: UIViewController {
                 self.catView.center = self.view.center
             })
         }
+        
     }
     
     // MARK: - Private methods
@@ -267,6 +268,7 @@ class ViewController: UIViewController {
                     self.imageView.frame.origin.y +=
                     self.view.frame.width + 800
                 })
+            
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {

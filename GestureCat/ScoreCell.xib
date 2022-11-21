@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,11 +17,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erg-eK-HON">
-                        <rect key="frame" x="10" y="0.0" width="162.33333333333334" height="34"/>
+                        <rect key="frame" x="10" y="0.0" width="173" height="34"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="34" id="hX7-ke-uyD"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="30"/>
+                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="32"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -31,21 +31,21 @@
                             <constraint firstAttribute="height" constant="18" id="G2I-Hh-i52"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kY-va-gkg">
-                        <rect key="frame" x="347.66666666666669" y="8" width="72.333333333333314" height="34"/>
+                        <rect key="frame" x="362.33333333333331" y="0.0" width="57.666666666666686" height="34"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="34" id="xRo-aj-rPt"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="30"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="24"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="2kY-va-gkg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="2zc-HW-uK6"/>
+                    <constraint firstItem="2kY-va-gkg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2zc-HW-uK6"/>
                     <constraint firstItem="2kY-va-gkg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="erg-eK-HON" secondAttribute="trailing" constant="16" id="BC5-zJ-JSw"/>
                     <constraint firstItem="erg-eK-HON" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="IAB-Z7-rrH"/>
                     <constraint firstItem="BU9-0t-Si5" firstAttribute="top" secondItem="erg-eK-HON" secondAttribute="bottom" constant="16" id="QT7-kj-EOn"/>
