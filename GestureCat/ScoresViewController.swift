@@ -49,14 +49,18 @@ extension ScoresViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int { 1 }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { 15 }//scores.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { scores.count }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let index = indexPath.row
+        
+        selectedIndex = index
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "openScore", sender: self)
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row
-        
-       selectedIndex = index
-       tableView.deselectRow(at: indexPath, animated: true)
-       performSegue(withIdentifier: "openScore", sender: self)
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ScoreCell,
               index >= 0,
@@ -82,7 +86,8 @@ extension ScoresViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
         
     }
- 
+    
 }
+
 
 

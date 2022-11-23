@@ -14,15 +14,15 @@ protocol BlurView where Self:UIView {
 extension BlurView {
     func makeBlur() {
         
-        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffect = UIBlurEffect(style: .light)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
             blurEffectView.frame = bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            blurEffectView.alpha = 0
+        blurEffectView.alpha = 3
             addSubview(blurEffectView)
             
-        UIView.animate(withDuration: 7, delay: 0, options: .curveEaseOut, animations: {
-            blurEffectView.alpha = 0.8
+        UIView.animate(withDuration: 2, delay: 0, options: .curveEaseOut, animations: {
+            blurEffectView.alpha = 0
               }, completion: nil)
         
     }

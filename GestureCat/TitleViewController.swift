@@ -37,12 +37,13 @@ class TitleViewController: UIViewController {
           TopRecord.layer.borderWidth = 1
          
             let gradientStartTitle = CAGradientLayer()
-                gradientStartTitle.colors = [UIColor.white.cgColor,UIColor.systemGreen.cgColor,]
+            gradientStartTitle.colors = [UIColor.systemTeal.cgColor,UIColor.systemGreen.cgColor,]
             gradientStartTitle.frame = StartTitle.bounds
         StartTitle.layer.insertSublayer(gradientStartTitle, at: 0)
         StartTitle.layer.cornerRadius = 17
         StartTitle.layer.masksToBounds = true
         StartTitle.layer.borderWidth = 1
+            
             
             let gradientSettings = CAGradientLayer()
                 gradientSettings.colors = [UIColor.systemFill.cgColor,UIColor.systemRed.cgColor,]
@@ -68,8 +69,9 @@ class TitleViewController: UIViewController {
         animator.addBehavior(collision)
 
         let itemBehaviour = UIDynamicItemBehavior(items: [catDinaic])
-            itemBehaviour.elasticity = 1.05
+            itemBehaviour.elasticity = 1.02
         animator.addBehavior(itemBehaviour)
+  
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -111,6 +113,7 @@ class TitleViewController: UIViewController {
             } else {
                 handler?(true)
             }
+            
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
             handler?(false)
