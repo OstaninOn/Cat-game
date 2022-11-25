@@ -15,6 +15,11 @@
 		1F6BBDEC292A4F76003CEE2B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6BBDEB292A4F76003CEE2B /* SettingsViewController.swift */; };
 		1F6BBDEE292A5DC0003CEE2B /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6BBDED292A5DC0003CEE2B /* ScoreViewController.swift */; };
 		1F6BBDF4292D498A003CEE2B /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6BBDF3292D498A003CEE2B /* UserDefaults.swift */; };
+		1FA32E06292FD778003BAA03 /* hrums.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1FA32E05292FD778003BAA03 /* hrums.mp3 */; };
+		1FA32E08292FDE87003BAA03 /* titl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1FA32E07292FDE87003BAA03 /* titl.mp3 */; };
+		1FA32E0A29300366003BAA03 /* MusicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA32E0929300366003BAA03 /* MusicHelper.swift */; };
+		1FA32E0C29300B30003BAA03 /* MusicSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA32E0B29300B30003BAA03 /* MusicSound.swift */; };
+		1FA32E0E2930AA89003BAA03 /* UserDefaultsSound+Exstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA32E0D2930AA89003BAA03 /* UserDefaultsSound+Exstension.swift */; };
 		1FA5077C2906EBB700B1D363 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5077B2906EBB700B1D363 /* CustomViews.swift */; };
 		1FCE36ED28EAE189000BFEC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE36EC28EAE189000BFEC4 /* AppDelegate.swift */; };
 		1FCE36EF28EAE189000BFEC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE36EE28EAE189000BFEC4 /* SceneDelegate.swift */; };
@@ -37,6 +42,11 @@
 		1F6BBDEB292A4F76003CEE2B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1F6BBDED292A5DC0003CEE2B /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		1F6BBDF3292D498A003CEE2B /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		1FA32E05292FD778003BAA03 /* hrums.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hrums.mp3; sourceTree = "<group>"; };
+		1FA32E07292FDE87003BAA03 /* titl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = titl.mp3; sourceTree = "<group>"; };
+		1FA32E0929300366003BAA03 /* MusicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHelper.swift; sourceTree = "<group>"; };
+		1FA32E0B29300B30003BAA03 /* MusicSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSound.swift; sourceTree = "<group>"; };
+		1FA32E0D2930AA89003BAA03 /* UserDefaultsSound+Exstension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaultsSound+Exstension.swift"; sourceTree = "<group>"; };
 		1FA5077B2906EBB700B1D363 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		1FCE36E928EAE189000BFEC4 /* GestureCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCE36EC28EAE189000BFEC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,13 +97,18 @@
 		1FCE36EB28EAE189000BFEC4 /* GestureCat */ = {
 			isa = PBXGroup;
 			children = (
+				1FA32E05292FD778003BAA03 /* hrums.mp3 */,
+				1FA32E07292FDE87003BAA03 /* titl.mp3 */,
 				1FCE36EC28EAE189000BFEC4 /* AppDelegate.swift */,
 				1FCE36EE28EAE189000BFEC4 /* SceneDelegate.swift */,
 				1FCE36F028EAE189000BFEC4 /* ViewController.swift */,
 				1F166F9F28FFE064004BD2B1 /* BlurView.swift */,
 				1FCE370228EAE2AA000BFEC4 /* TitleViewController.swift */,
 				1F6BBDEB292A4F76003CEE2B /* SettingsViewController.swift */,
+				1FA32E0929300366003BAA03 /* MusicHelper.swift */,
+				1FA32E0B29300B30003BAA03 /* MusicSound.swift */,
 				1F6BBDF3292D498A003CEE2B /* UserDefaults.swift */,
+				1FA32E0D2930AA89003BAA03 /* UserDefaultsSound+Exstension.swift */,
 				1F6BBDE5292810A5003CEE2B /* ScoresViewController.swift */,
 				1F0CE322290C02610032EDEB /* String+Scores.swift */,
 				1FA5077B2906EBB700B1D363 /* CustomViews.swift */,
@@ -190,7 +205,9 @@
 				1FCE36F928EAE18A000BFEC4 /* LaunchScreen.storyboard in Resources */,
 				1FCE36F628EAE18A000BFEC4 /* Assets.xcassets in Resources */,
 				1F6BBDEA292813C9003CEE2B /* ScoreCell.xib in Resources */,
+				1FA32E06292FD778003BAA03 /* hrums.mp3 in Resources */,
 				1FCE36F428EAE189000BFEC4 /* Main.storyboard in Resources */,
+				1FA32E08292FDE87003BAA03 /* titl.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,10 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA32E0A29300366003BAA03 /* MusicHelper.swift in Sources */,
 				1F6BBDE6292810A5003CEE2B /* ScoresViewController.swift in Sources */,
 				1FCE36F128EAE189000BFEC4 /* ViewController.swift in Sources */,
+				1FA32E0E2930AA89003BAA03 /* UserDefaultsSound+Exstension.swift in Sources */,
 				1F166FA028FFE064004BD2B1 /* BlurView.swift in Sources */,
 				1FCE370328EAE2AA000BFEC4 /* TitleViewController.swift in Sources */,
+				1FA32E0C29300B30003BAA03 /* MusicSound.swift in Sources */,
 				1FA5077C2906EBB700B1D363 /* CustomViews.swift in Sources */,
 				1F6BBDEE292A5DC0003CEE2B /* ScoreViewController.swift in Sources */,
 				1FCE36ED28EAE189000BFEC4 /* AppDelegate.swift in Sources */,

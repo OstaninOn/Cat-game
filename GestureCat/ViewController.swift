@@ -1,6 +1,9 @@
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var audioPlayer = AVAudioPlayer()
     
     // MARK: - Private properties
     private let image = UIImage(named: "fish")
@@ -57,6 +60,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       // let isOn = UserDefaults.standard.switchIsOn
+        
+
+//        do {
+//            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "hrums", ofType: "mp3")!))
+//            audioPlayer.prepareToPlay()
+//        } catch {
+//
+//        }
         
         view.addSubview(imageView)
         imageView.frame = CGRect(x: 30, y: -100, width: 50, height: 50)
@@ -220,6 +232,9 @@ class ViewController: UIViewController {
             imagSausageSecond.layer.removeAllAnimations()
             isGaming = false
             saveRecord()
+            
+  //  вибро
+            AudioServicesPlaySystemSound(SystemSoundID(4095))
        
           let alert = UIAlertController(title: "GAME OVER", message: "saving", preferredStyle: .alert)
             
@@ -256,7 +271,8 @@ class ViewController: UIViewController {
         if checkIntersect(catView, imageView){
             print("fish")
             isGaming = true
-            
+            audioPlayer.play()
+            MusicSound.sharedSound.playMusicSound()
             score += 1
             ScoreLebel.text = String(score)
             
@@ -281,7 +297,7 @@ class ViewController: UIViewController {
         if checkIntersect(catView, imageViewSecond){
             print("fish")
             isGaming = true
-            
+            MusicSound.sharedSound.playMusicSound()
             score += 1
             ScoreLebel.text = String(score)
             
@@ -305,7 +321,7 @@ class ViewController: UIViewController {
         if checkIntersect(catView, imageViewThird){
             print("fish")
             isGaming = true
-            
+            MusicSound.sharedSound.playMusicSound()
             score += 1
             ScoreLebel.text = String(score)
             
@@ -329,7 +345,7 @@ class ViewController: UIViewController {
         if checkIntersect(catView, imageSausageFirst){
             print("fish")
             isGaming = true
-            
+            MusicSound.sharedSound.playMusicSound()
             score += 1
             ScoreLebel.text = String(score)
             
@@ -354,7 +370,7 @@ class ViewController: UIViewController {
         if checkIntersect(catView, imagSausageSecond){
             print("fish")
             isGaming = true
-            
+            MusicSound.sharedSound.playMusicSound()
             score += 1
             ScoreLebel.text = String(score)
             

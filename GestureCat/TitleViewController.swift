@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class TitleViewController: UIViewController {
     
@@ -25,7 +26,7 @@ class TitleViewController: UIViewController {
     
         override func viewDidLoad() {
         super.viewDidLoad()
-
+        
             BackgroundImage.makeBlur()
 
         let gradientTopRecord = CAGradientLayer()
@@ -73,10 +74,10 @@ class TitleViewController: UIViewController {
         animator.addBehavior(itemBehaviour)
   
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    
+        
         checkUserName() { isConfirmed in
             if !isConfirmed {
                 self.BigJapan()
