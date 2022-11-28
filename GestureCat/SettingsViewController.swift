@@ -11,6 +11,10 @@ import AVFoundation
 
 class SettingsViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
+    @IBOutlet weak var volumeSliderMusicFirst: UISlider!
+    
+    @IBOutlet weak var volumeSliderSoundsFirst: UISlider!
+    
     @IBOutlet weak var switshSouns: UISwitch!
     
     @IBOutlet weak var switchMusic: UISwitch!
@@ -73,7 +77,7 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
                 
                 self.present(mail, animated: true)
             } else {
-          }
+            }
         })
         
         let cencelBtn = UIAlertAction(title: "Cencel", style: .destructive, handler: nil)
@@ -92,22 +96,24 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
     
     @IBAction func soundsAction(_ sender: UISwitch) {
         titleSouns(isOn: sender.isOn)
+   
         if sender.isOn {
+
             MusicSound.sharedSound.playMusicSound()
             UserDefaults.standard.switchIsOn = sender.isOn
             return
         } else {
             MusicSound.sharedSound.audioPlayer?.stop()
             UserDefaults.standard.switchIsOn = sender.isOn
-            return
-        }
     }
-    @objc private func titleSouns(isOn: Bool) {
+}
+     private func titleSouns(isOn: Bool) {
         switshSouns.isOn = isOn
     }
     
     
     @IBAction func musicAction(_ sender: UISwitch) {
+        
         titleMusic(isOn: sender.isOn)
         if sender.isOn {
             MusicHelper.sharedHelper.playBackgroundMusic()
@@ -119,8 +125,19 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
         return
     }
 }
+    
+    
     private func titleMusic(isOn: Bool) {
         switchMusic.isOn = isOn
     }
     
+    
+    @IBAction func volumeSliderSoundsSecond(_ sender: UISlider) {
+        MusicSound.sharedSound.audioPlayer?.volume = volumeSliderSoundsFirst.value
+    }
+    
+    @IBAction func volumeSliderMusic(_ sender: UISlider) {
+        MusicHelper.sharedHelper.audioPlayer?.volume = volumeSliderMusicFirst.value
+        
+    }
 }

@@ -8,6 +8,7 @@ import UIKit
 import AVFoundation
 
 class MusicHelper {
+    
     static let sharedHelper = MusicHelper()
     var audioPlayer: AVAudioPlayer?
     
@@ -18,8 +19,9 @@ class MusicHelper {
             audioPlayer!.numberOfLoops = -1
             audioPlayer!.prepareToPlay()
             audioPlayer!.play()
-        } catch {
-            //print("Cannot play the file")
+            } catch {
         }
     }
+  
+    
 }

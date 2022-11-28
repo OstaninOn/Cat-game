@@ -6,12 +6,12 @@ class ViewController: UIViewController {
     var audioPlayer = AVAudioPlayer()
     
     // MARK: - Private properties
-    private let image = UIImage(named: "fish")
-    private lazy var imageView = UIImageView(image: image)
+    var image = UIImage(named: "fish")
+    lazy var imageView = UIImageView(image: image)
     private lazy var imageViewSecond = UIImageView(image: image)
     private lazy var imageViewThird = UIImageView(image: image)
     
-    let Ice = UIImage(named: "ice")
+    var Ice = UIImage(named: "ice")
     lazy var imageViewIce = UIImageView(image: Ice)
     lazy var imageViewIceThird = UIImageView(image: Ice)
     
@@ -60,15 +60,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // let isOn = UserDefaults.standard.switchIsOn
-        
-
-//        do {
-//            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "hrums", ofType: "mp3")!))
-//            audioPlayer.prepareToPlay()
-//        } catch {
-//
-//        }
         
         view.addSubview(imageView)
         imageView.frame = CGRect(x: 30, y: -100, width: 50, height: 50)
@@ -233,7 +224,7 @@ class ViewController: UIViewController {
             isGaming = false
             saveRecord()
             
-  //  вибро
+  // ВИБРО
             AudioServicesPlaySystemSound(SystemSoundID(4095))
        
           let alert = UIAlertController(title: "GAME OVER", message: "saving", preferredStyle: .alert)
@@ -265,13 +256,14 @@ class ViewController: UIViewController {
         scores.sort(by: >)
         StoreManager.shared.scores = scores
         }
+
     
     func intersectsFirstFish() {
         guard isGaming else { return }
         if checkIntersect(catView, imageView){
             print("fish")
             isGaming = true
-            audioPlayer.play()
+            
             MusicSound.sharedSound.playMusicSound()
             score += 1
             ScoreLebel.text = String(score)

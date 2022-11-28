@@ -9,6 +9,7 @@ import UIKit
 import AVFoundation
 
 class MusicSound {
+    
     static let sharedSound = MusicSound()
     var audioPlayer: AVAudioPlayer?
     
