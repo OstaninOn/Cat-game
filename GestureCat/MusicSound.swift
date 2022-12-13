@@ -10,10 +10,15 @@ import AVFoundation
 
 class MusicSound {
     
-    static let sharedSound = MusicSound()
+    static let shared = MusicSound()
     var audioPlayer: AVAudioPlayer?
+    var isOn = StoreManager.shared.isSoundsOn
+    
+    private init() { }
     
     func playMusicSound() {
+        guard isOn else { return }
+        
         let aSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "hrums", ofType: "mp3")!)
         do {
             audioPlayer = try AVAudioPlayer(contentsOf:aSound as URL)

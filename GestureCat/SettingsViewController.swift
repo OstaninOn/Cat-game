@@ -26,17 +26,8 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let isOn = UserDefaults.standard.switchIsOn
-        titleMusic(isOn: isOn)
-        titleSouns(isOn: isOn)
-        
-        if let userDefaultValue = UserDefaults.standard.getValueOfSwitch(), userDefaultValue {
-            switchThema.setOn (true, animated: false)
-            lbl.text = "Light mode"
-        } else {
-            switchThema.setOn (false, animated: true)
-            lbl.text = "Dark mode"
-        }
+        titleMusic(isOn: StoreManager.shared.isMusicOn)
+        titleSouns(isOn: StoreManager.shared.isSoundsOn)
     }
     
     @IBAction func onClickSwitch(_ sender: UISwitch) {
@@ -44,12 +35,10 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
             let appDelegate = UIApplication.shared.windows.first
             if sender.isOn {
                 appDelegate?.overrideUserInterfaceStyle = .light
-                UserDefaults.standard.setValueForSwitch(value: true)
                 lbl.text = "Light mode"
                 return
             } else {
                 appDelegate?.overrideUserInterfaceStyle = .dark
-                UserDefaults.standard.setValueForSwitch(value: false)
                 lbl.text = "Dark mode"
                 return
             }
@@ -92,39 +81,18 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
         controller.dismiss(animated: true)
     }
     
-    
-    
     @IBAction func soundsAction(_ sender: UISwitch) {
-        titleSouns(isOn: sender.isOn)
-   
-        if sender.isOn {
-
-            MusicSound.sharedSound.playMusicSound()
-            UserDefaults.standard.switchIsOn = sender.isOn
-            return
-        } else {
-            MusicSound.sharedSound.audioPlayer?.stop()
-            UserDefaults.standard.switchIsOn = sender.isOn
+        StoreManager.shared.isSoundsOn = sender.isOn
     }
-}
-     private func titleSouns(isOn: Bool) {
+    
+    private func titleSouns(isOn: Bool) {
         switshSouns.isOn = isOn
     }
     
     
     @IBAction func musicAction(_ sender: UISwitch) {
-        
-        titleMusic(isOn: sender.isOn)
-        if sender.isOn {
-            MusicHelper.sharedHelper.playBackgroundMusic()
-            UserDefaults.standard.switchIsOn = sender.isOn
-            return
-    } else {
-         MusicHelper.sharedHelper.audioPlayer?.stop()
-        UserDefaults.standard.switchIsOn = sender.isOn
-        return
+        StoreManager.shared.isMusicOn = sender.isOn
     }
-}
     
     
     private func titleMusic(isOn: Bool) {
@@ -133,11 +101,11 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
     
     
     @IBAction func volumeSliderSoundsSecond(_ sender: UISlider) {
-        MusicSound.sharedSound.audioPlayer?.volume = volumeSliderSoundsFirst.value
+        MusicSound.shared.audioPlayer?.volume = volumeSliderSoundsFirst.value
     }
     
     @IBAction func volumeSliderMusic(_ sender: UISlider) {
-        MusicHelper.sharedHelper.audioPlayer?.volume = volumeSliderMusicFirst.value
+        MusicHelper.shared.audioPlayer.volume = volumeSliderMusicFirst.value
         
     }
 }

@@ -9,19 +9,36 @@ import AVFoundation
 
 class MusicHelper {
     
-    static let sharedHelper = MusicHelper()
-    var audioPlayer: AVAudioPlayer?
-    
-    func playBackgroundMusic() {
+    static let shared = MusicHelper()
+    var audioPlayer: AVAudioPlayer = {
         let aSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "titl", ofType: "mp3")!)
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf:aSound as URL)
-            audioPlayer!.numberOfLoops = -1
-            audioPlayer!.prepareToPlay()
-            audioPlayer!.play()
-            } catch {
+            return try AVAudioPlayer(contentsOf:aSound as URL)
+        } catch {
+            return AVAudioPlayer()
+        }
+    }()
+    
+    var isOn = StoreManager.shared.isMusicOn {
+        didSet {
+            if isOn {
+                playBackgroundMusic()
+            } else {
+                stopBackgroundMusic()
+            }
         }
     }
-  
     
+    private init() { }
+    
+    func playBackgroundMusic() {
+        guard isOn else { return }
+        audioPlayer.numberOfLoops = -1
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+    }
+    
+    func stopBackgroundMusic() {
+        audioPlayer.stop()
+    }
 }

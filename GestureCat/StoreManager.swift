@@ -26,10 +26,10 @@ class StoreManager {
     }
   
     var name: String{
-        get{
+        get {
             storage.string(forKey: "name") ?? ""
         }
-        set{
+        set {
             storage.set(newValue, forKey: "name")
         }
     }
@@ -48,6 +48,26 @@ class StoreManager {
             if let data = try? JSONEncoder().encode(newValue) {
                 UserDefaults.standard.set(data, forKey: "scores")
             }
+        }
+    }
+    
+    var isSoundsOn: Bool {
+        get {
+            storage.bool(forKey: "isSoundsOn")
+        }
+        set {
+            storage.set(newValue, forKey: "isSoundsOn")
+            MusicSound.shared.isOn = newValue
+        }
+    }
+    
+    var isMusicOn: Bool {
+        get {
+            storage.bool(forKey: "isMusicOn")
+        }
+        set {
+            storage.set(newValue, forKey: "isMusicOn")
+            MusicHelper.shared.isOn = newValue
         }
     }
     
