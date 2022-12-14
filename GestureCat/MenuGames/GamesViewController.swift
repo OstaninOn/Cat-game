@@ -1,7 +1,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class GamesViewController: UIViewController {
     
     var audioPlayer = AVAudioPlayer()
     
