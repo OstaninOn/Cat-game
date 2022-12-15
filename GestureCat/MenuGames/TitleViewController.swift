@@ -70,9 +70,9 @@ class TitleViewController: UIViewController {
         animator.addBehavior(collision)
         
         let itemBehaviour = UIDynamicItemBehavior(items: [catDinaic])
-        itemBehaviour.elasticity = 1.02
+        itemBehaviour.elasticity = 1.05
         animator.addBehavior(itemBehaviour)
-        
+        movie()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,6 +87,25 @@ class TitleViewController: UIViewController {
         }
     }
     
+    func movie() {
+        
+        let alpha = catDinaic.alpha
+        let center = catDinaic.center
+        let transform = catDinaic.transform
+        
+        UIView.animate(withDuration: 3, animations: {
+            self.catDinaic.alpha = 2
+            self.catDinaic.center = CGPoint(x: 500, y: 900)
+            self.catDinaic.transform = CGAffineTransform(scaleX: 1.0, y: 9.0)
+        }) { (isFinished) in
+            if isFinished {
+                self.catDinaic.alpha = alpha
+                self.catDinaic.center = center
+                self.catDinaic.transform = transform
+        }
+    }
+}
+   
     // MARK: - Private methods
     
     private func BigJapan() {

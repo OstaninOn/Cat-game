@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		1F0CE323290C02610032EDEB /* String+Scores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CE322290C02610032EDEB /* String+Scores.swift */; };
 		1F166FA028FFE064004BD2B1 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F166F9F28FFE064004BD2B1 /* BlurView.swift */; };
+		1F431BD92949F9AD009F09FB /* MusikFon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F431BD82949F9AD009F09FB /* MusikFon.mp3 */; };
+		1F431BDB294A08FA009F09FB /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F431BDA294A08FA009F09FB /* ScoreCell.xib */; };
 		1F6BBDE6292810A5003CEE2B /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6BBDE5292810A5003CEE2B /* ScoresViewController.swift */; };
 		1F6BBDE9292813C9003CEE2B /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6BBDE7292813C9003CEE2B /* ScoreCell.swift */; };
 		1F6BBDEC292A4F76003CEE2B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6BBDEB292A4F76003CEE2B /* SettingsViewController.swift */; };
 		1F6BBDEE292A5DC0003CEE2B /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6BBDED292A5DC0003CEE2B /* ScoreViewController.swift */; };
 		1FA32E06292FD778003BAA03 /* hrums.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1FA32E05292FD778003BAA03 /* hrums.mp3 */; };
-		1FA32E08292FDE87003BAA03 /* titl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1FA32E07292FDE87003BAA03 /* titl.mp3 */; };
 		1FA32E0A29300366003BAA03 /* MusicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA32E0929300366003BAA03 /* MusicHelper.swift */; };
 		1FA32E0C29300B30003BAA03 /* MusicSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA32E0B29300B30003BAA03 /* MusicSound.swift */; };
 		1FA5077C2906EBB700B1D363 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5077B2906EBB700B1D363 /* CustomViews.swift */; };
@@ -34,12 +35,13 @@
 		1F0CE322290C02610032EDEB /* String+Scores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Scores.swift"; sourceTree = "<group>"; };
 		1F166F9F28FFE064004BD2B1 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = GestureCat/Exstensions/BlurView.swift; sourceTree = SOURCE_ROOT; };
 		1F431BD32949CA29009F09FB /* ScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
+		1F431BD82949F9AD009F09FB /* MusikFon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MusikFon.mp3; sourceTree = "<group>"; };
+		1F431BDA294A08FA009F09FB /* ScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScoreCell.xib; path = "../../../../../Downloads/Telegram Desktop/Cat-game-HWcat 3 5/GestureCat/ScoreCell.xib"; sourceTree = "<group>"; };
 		1F6BBDE5292810A5003CEE2B /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		1F6BBDE7292813C9003CEE2B /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		1F6BBDEB292A4F76003CEE2B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1F6BBDED292A5DC0003CEE2B /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		1FA32E05292FD778003BAA03 /* hrums.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hrums.mp3; sourceTree = "<group>"; };
-		1FA32E07292FDE87003BAA03 /* titl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = titl.mp3; sourceTree = "<group>"; };
 		1FA32E0929300366003BAA03 /* MusicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHelper.swift; sourceTree = "<group>"; };
 		1FA32E0B29300B30003BAA03 /* MusicSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSound.swift; sourceTree = "<group>"; };
 		1FA5077B2906EBB700B1D363 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
@@ -77,7 +79,7 @@
 				1FA32E0929300366003BAA03 /* MusicHelper.swift */,
 				1FA32E0B29300B30003BAA03 /* MusicSound.swift */,
 				1FA32E05292FD778003BAA03 /* hrums.mp3 */,
-				1FA32E07292FDE87003BAA03 /* titl.mp3 */,
+				1F431BD82949F9AD009F09FB /* MusikFon.mp3 */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				1F431BD32949CA29009F09FB /* ScoreCell.xib */,
+				1F431BDA294A08FA009F09FB /* ScoreCell.xib */,
 				1FCE36F228EAE189000BFEC4 /* Main.storyboard */,
 				1FCE36F728EAE18A000BFEC4 /* LaunchScreen.storyboard */,
 			);
@@ -243,11 +246,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F431BDB294A08FA009F09FB /* ScoreCell.xib in Resources */,
 				1FCE36F928EAE18A000BFEC4 /* LaunchScreen.storyboard in Resources */,
 				1FCE36F628EAE18A000BFEC4 /* Assets.xcassets in Resources */,
 				1FA32E06292FD778003BAA03 /* hrums.mp3 in Resources */,
 				1FCE36F428EAE189000BFEC4 /* Main.storyboard in Resources */,
-				1FA32E08292FDE87003BAA03 /* titl.mp3 in Resources */,
+				1F431BD92949F9AD009F09FB /* MusikFon.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

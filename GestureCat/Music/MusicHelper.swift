@@ -11,7 +11,7 @@ class MusicHelper {
     
     static let shared = MusicHelper()
     var audioPlayer: AVAudioPlayer = {
-        let aSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "titl", ofType: "mp3")!)
+        let aSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "MusikFon", ofType: "mp3")!)
         do {
             return try AVAudioPlayer(contentsOf:aSound as URL)
         } catch {

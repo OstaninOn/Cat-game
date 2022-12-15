@@ -16,13 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="VC2" image="121" translatesAutoresizingMaskIntoConstraints="NO" id="zwp-y8-wZ7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="VC2" image="Обои" translatesAutoresizingMaskIntoConstraints="NO" id="zwp-y8-wZ7">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKo-aO-yCj">
                                 <rect key="frame" x="147" y="557" width="80" height="80"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngwing.com" translatesAutoresizingMaskIntoConstraints="NO" id="iV7-xr-h0F">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="patrick-star-spongebob-squarepants-sandy-cheeks-starfish-clip-art-patrick-039-s-day-906dac66b9bfb305860ea8460927dc41" translatesAutoresizingMaskIntoConstraints="NO" id="iV7-xr-h0F">
                                         <rect key="frame" x="-5" y="-5" width="92" height="91"/>
                                     </imageView>
                                 </subviews>
@@ -119,12 +119,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Темно синий неон с Кирпичной Стеной Кибер Понедельник Ваша История-12" translatesAutoresizingMaskIntoConstraints="NO" id="WST-Ne-svI" customClass="BackgroundImageView" customModule="GestureCat" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fon0" translatesAutoresizingMaskIntoConstraints="NO" id="WST-Ne-svI" customClass="BackgroundImageView" customModule="GestureCat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngwing.com" translatesAutoresizingMaskIntoConstraints="NO" id="oiL-A5-Zjg">
-                                <rect key="frame" x="156" y="54" width="79" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bk8-ph-CTS">
                                 <rect key="frame" x="80" y="394" width="230" height="55"/>
@@ -170,6 +166,10 @@
                                     <segue destination="dTv-fi-GHo" kind="show" id="iWM-fJ-42U"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgbin_patrick-star-png" translatesAutoresizingMaskIntoConstraints="NO" id="oiL-A5-Zjg">
+                                <rect key="frame" x="130" y="267" width="130" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CLd-ex-eEf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -207,7 +207,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Темно синий неон с Кирпичной Стеной Кибер Понедельник Ваша История-11" translatesAutoresizingMaskIntoConstraints="NO" id="4cw-A5-LZF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Без имени-1" translatesAutoresizingMaskIntoConstraints="NO" id="4cw-A5-LZF">
                                 <rect key="frame" x="0.0" y="91" width="390" height="753"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8e-fX-Xtj">
@@ -260,8 +260,8 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCR-pR-1fb">
-                                <rect key="frame" x="20" y="590" width="350" height="50"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <rect key="frame" x="20" y="710" width="350" height="50"/>
+                                <color key="backgroundColor" red="0.0023702711332589388" green="0.93677371740341187" blue="0.99883514642715454" alpha="0.51072318980235931" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ISO-pH-fcA"/>
                                 </constraints>
@@ -304,7 +304,7 @@
                         <viewLayoutGuide key="safeArea" id="Oew-Jx-V45"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Oew-Jx-V45" firstAttribute="bottom" secondItem="bCR-pR-1fb" secondAttribute="bottom" constant="170" id="0YQ-3L-STy"/>
+                            <constraint firstItem="Oew-Jx-V45" firstAttribute="bottom" secondItem="bCR-pR-1fb" secondAttribute="bottom" constant="50" id="0YQ-3L-STy"/>
                             <constraint firstItem="nR5-fe-edf" firstAttribute="top" secondItem="n3T-9B-zI0" secondAttribute="bottom" constant="42" id="0e2-oy-XJt"/>
                             <constraint firstItem="n3T-9B-zI0" firstAttribute="top" secondItem="7eT-WW-Yva" secondAttribute="bottom" constant="40.670000000000002" id="2jl-0h-g4K"/>
                             <constraint firstItem="7eT-WW-Yva" firstAttribute="top" secondItem="Oew-Jx-V45" secondAttribute="top" constant="46" id="4hM-Na-ZaJ"/>
@@ -385,7 +385,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Темно синий неон с Кирпичной Стеной Кибер Понедельник Ваша История-10" translatesAutoresizingMaskIntoConstraints="NO" id="kCI-Du-xSS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12" translatesAutoresizingMaskIntoConstraints="NO" id="kCI-Du-xSS">
                                 <rect key="frame" x="0.0" y="91" width="390" height="753"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-Qx-cNc">
@@ -404,7 +404,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzq-lk-1W1">
-                                <rect key="frame" x="16" y="595" width="358" height="35"/>
+                                <rect key="frame" x="16" y="565" width="358" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="H67-2f-5gH"/>
                                 </constraints>
@@ -418,7 +418,7 @@
                                     <constraint firstAttribute="height" constant="50" id="BNf-wK-Svh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -439,7 +439,7 @@
                             <constraint firstAttribute="bottom" secondItem="kCI-Du-xSS" secondAttribute="bottom" id="V7G-qd-3dL"/>
                             <constraint firstItem="kCI-Du-xSS" firstAttribute="leading" secondItem="1vn-BS-uMC" secondAttribute="leading" id="aHH-7s-oQ9"/>
                             <constraint firstItem="kCI-Du-xSS" firstAttribute="trailing" secondItem="1vn-BS-uMC" secondAttribute="trailing" id="bIu-cW-JIT"/>
-                            <constraint firstItem="Aah-3a-X7S" firstAttribute="top" secondItem="Qzq-lk-1W1" secondAttribute="bottom" constant="130" id="dCl-fh-pgN"/>
+                            <constraint firstItem="Aah-3a-X7S" firstAttribute="top" secondItem="Qzq-lk-1W1" secondAttribute="bottom" constant="160" id="dCl-fh-pgN"/>
                             <constraint firstItem="1vn-BS-uMC" firstAttribute="trailing" secondItem="IiJ-Qx-cNc" secondAttribute="trailing" constant="16" id="oyq-Ma-sK6"/>
                             <constraint firstAttribute="bottom" secondItem="kCI-Du-xSS" secondAttribute="bottom" id="pbB-di-KN8"/>
                             <constraint firstItem="IiJ-Qx-cNc" firstAttribute="leading" secondItem="1vn-BS-uMC" secondAttribute="leading" constant="16" id="qMu-ZB-BXs"/>
@@ -462,11 +462,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="121" width="1242" height="2208"/>
-        <image name="pngwing.com" width="4751" height="5094"/>
-        <image name="Темно синий неон с Кирпичной Стеной Кибер Понедельник Ваша История-10" width="1080" height="1920"/>
-        <image name="Темно синий неон с Кирпичной Стеной Кибер Понедельник Ваша История-11" width="1080" height="1920"/>
-        <image name="Темно синий неон с Кирпичной Стеной Кибер Понедельник Ваша История-12" width="1080" height="1920"/>
+        <image name="12" width="564" height="1003"/>
+        <image name="fon0" width="1242" height="2208"/>
+        <image name="imgbin_patrick-star-png" width="640" height="980"/>
+        <image name="patrick-star-spongebob-squarepants-sandy-cheeks-starfish-clip-art-patrick-039-s-day-906dac66b9bfb305860ea8460927dc41" width="520" height="700"/>
+        <image name="Без имени-1" width="1242" height="2208"/>
+        <image name="Обои" width="640" height="1280"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

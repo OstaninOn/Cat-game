@@ -3,7 +3,7 @@ import AVFoundation
 
 class GamesViewController: UIViewController {
     
-    var audioPlayer = AVAudioPlayer()
+    //var audioPlayer = AVAudioPlayer()
     
     // MARK: - Private properties
     var image = UIImage(named: "fish")
@@ -11,13 +11,13 @@ class GamesViewController: UIViewController {
     private lazy var imageViewSecond = UIImageView(image: image)
     private lazy var imageViewThird = UIImageView(image: image)
     
-    var Ice = UIImage(named: "ice")
-    lazy var imageViewIce = UIImageView(image: Ice)
-    lazy var imageViewIceThird = UIImageView(image: Ice)
+    var meduza2 = UIImage(named: "meduza2")
+    lazy var imageMeduza2 = UIImageView(image: meduza2)
+    lazy var imageViewMeduza3 = UIImageView(image: meduza2)
     
-    let imageSausage = UIImage(named: "sausage")
-    lazy var imageSausageFirst = UIImageView(image: imageSausage)
-    lazy var imagSausageSecond = UIImageView(image: imageSausage)
+    let burger1 = UIImage(named: "burger1")
+    lazy var imageBurger1 = UIImageView(image: burger1)
+    lazy var imageBurger2 = UIImageView(image: burger1)
     
     lazy var catX: CGFloat = view.frame.width / 2
     lazy var catY: CGFloat = view.frame.height * 2 / 3
@@ -68,15 +68,15 @@ class GamesViewController: UIViewController {
         view.addSubview(imageViewThird)
         imageViewThird.frame = CGRect(x: 300, y: -150, width: 50, height: 50)
         
-        view.addSubview(imageViewIce)
-        imageViewIce.frame = CGRect(x: 30, y: -150, width: 100, height: 100)
-        view.addSubview(imageViewIceThird)
-        imageViewIceThird.frame = CGRect(x: 270, y: -80, width: 100, height: 100)
+        view.addSubview(imageMeduza2)
+        imageMeduza2.frame = CGRect(x: 30, y: -150, width: 130, height: 130)
+        view.addSubview(imageViewMeduza3)
+        imageViewMeduza3.frame = CGRect(x: 270, y: -80, width: 130, height: 130)
         
-        view.addSubview(imageSausageFirst)
-        imageSausageFirst.frame = CGRect(x: 80, y: -150, width: 60, height: 60)
-        view.addSubview(imagSausageSecond)
-        imagSausageSecond.frame = CGRect(x: 300, y: -60, width: 60, height: 60)
+        view.addSubview(imageBurger1)
+        imageBurger1.frame = CGRect(x: 80, y: -150, width: 80, height: 80)
+        view.addSubview(imageBurger2)
+        imageBurger2.frame = CGRect(x: 300, y: -60, width: 80, height: 80)
         
         catView.isUserInteractionEnabled = true
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dragTheView))
@@ -172,25 +172,25 @@ class GamesViewController: UIViewController {
         
         UIView.animate(withDuration: 6, delay: 10, options: [
             .curveLinear, .repeat], animations: {
-                self.imageViewIce.frame.origin.y +=
+                self.imageMeduza2.frame.origin.y +=
                 self.view.frame.width + 600
             })
         
         UIView.animate(withDuration: 8, delay: 3, options: [
             .curveLinear, .repeat], animations: {
-                self.imageViewIceThird.frame.origin.y +=
+                self.imageViewMeduza3.frame.origin.y +=
                 self.view.frame.width + 800
             })
         
         UIView.animate(withDuration: 5, delay: 3, options: [
             .curveLinear, .repeat], animations: {
-                self.imageSausageFirst.frame.origin.y +=
+                self.imageBurger1.frame.origin.y +=
                 self.view.frame.width + 800
             })
         
         UIView.animate(withDuration: 12, delay: 8, options: [
             .curveLinear, .repeat], animations: {
-                self.imagSausageSecond.frame.origin.y +=
+                self.imageBurger2.frame.origin.y +=
                 self.view.frame.width + 700
             })
         
@@ -198,8 +198,8 @@ class GamesViewController: UIViewController {
         intersectsFirstFish()
         intersectsSecondFish()
         intersectsThirdFish()
-        intersectsSausageFirst()
-        intersectsSausageSecond()
+        intersectsimageBurgerFirst()
+        intersectsBurgerSecond()
         
         setupVisualEffectView()
         
@@ -211,17 +211,17 @@ class GamesViewController: UIViewController {
     func intersects() {
         
         guard isGaming else { return }
-        if checkIntersect(catView, imageViewIce)
-            || checkIntersect(catView, imageViewIceThird) {
+        if checkIntersect(catView, imageMeduza2)
+            || checkIntersect(catView, imageViewMeduza3) {
             print("GAME OVER")
             animateIn()
-            imageViewIce.layer.removeAllAnimations()
-            imageViewIceThird.layer.removeAllAnimations()
+            imageMeduza2.layer.removeAllAnimations()
+            imageViewMeduza3.layer.removeAllAnimations()
             imageView.layer.removeAllAnimations()
             imageViewSecond.layer.removeAllAnimations()
             imageViewThird.layer.removeAllAnimations()
-            imageSausageFirst.layer.removeAllAnimations()
-            imagSausageSecond.layer.removeAllAnimations()
+            imageBurger1.layer.removeAllAnimations()
+            imageBurger2.layer.removeAllAnimations()
             isGaming = false
             saveRecord()
             MusicHelper.shared.stopBackgroundMusic()
@@ -335,9 +335,9 @@ class GamesViewController: UIViewController {
         }
     }
     
-    func intersectsSausageFirst() {
+    func intersectsimageBurgerFirst() {
         guard isGaming else { return }
-        if checkIntersect(catView, imageSausageFirst){
+        if checkIntersect(catView, imageBurger1){
             print("fish")
             isGaming = true
             MusicSound.shared.playMusicSound()
@@ -346,23 +346,23 @@ class GamesViewController: UIViewController {
             
             RezultLebel.text = String(rezult)
             
-            imageSausageFirst.frame = CGRect(x: 80, y: -150, width: 60, height: 60)
+            imageBurger1.frame = CGRect(x: 80, y: -150, width: 80, height: 80)
             UIView.animate(withDuration: 5, delay: 3, options: [
                 .curveLinear, .repeat], animations: {
-                    self.imageSausageFirst.frame.origin.y +=
+                    self.imageBurger1.frame.origin.y +=
                     self.view.frame.width + 800
                 })
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            self.intersectsSausageFirst()
+            self.intersectsimageBurgerFirst()
         }
         
     }
     
-    func intersectsSausageSecond() {
+    func intersectsBurgerSecond() {
         guard isGaming else { return }
-        if checkIntersect(catView, imagSausageSecond){
+        if checkIntersect(catView, imageBurger2){
             print("fish")
             isGaming = true
             MusicSound.shared.playMusicSound()
@@ -371,16 +371,16 @@ class GamesViewController: UIViewController {
             
             RezultLebel.text = String(rezult)
             
-            imagSausageSecond.frame = CGRect(x: 300, y: -60, width: 60, height: 60)
+            imageBurger2.frame = CGRect(x: 300, y: -60, width: 80, height: 80)
             UIView.animate(withDuration: 5, delay: 8, options: [
                 .curveLinear, .repeat], animations: {
-                    self.imagSausageSecond.frame.origin.y +=
+                    self.imageBurger2.frame.origin.y +=
                     self.view.frame.width + 400
                 })
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            self.intersectsSausageSecond()
+            self.intersectsBurgerSecond()
         }
     }
     
